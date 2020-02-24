@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://DirtStoneTileSet.tres" type="TileSet" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://WorldComplete.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Onclick_transport.tscn" type="PackedScene" id=4]
 
 [node name="World2" type="Node"]
 
@@ -10,14 +11,82 @@
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 32, 32 )
 format = 1
-tile_data = PoolIntArray( 65546, 1, 0, 65547, 1, 0, 131082, 1, 0, 131083, 1, 0, 131087, 1, 0, 131088, 1, 0, 131089, 1, 0, 196625, 1, 0, 262149, 1, 0, 262150, 1, 0, 262161, 1, 0, 327685, 1, 0, 327686, 1, 0, 327697, 1, 0, 393233, 1, 0, 458753, 2, 0, 458754, 2, 0, 458755, 2, 0, 458756, 2, 0, 458757, 2, 0, 458758, 2, 0, 458759, 2, 0, 458760, 2, 0, 458761, 2, 0, 458762, 2, 0, 458763, 2, 0, 458764, 2, 0, 458765, 2, 0, 458766, 2, 0, 458767, 2, 0, 458768, 2, 0, 458769, 1, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0, 524304, 0, 0, 524305, 0, 0 )
+tile_data = PoolIntArray( -983040, 1, 0, -983006, 1, 0, -917504, 1, 0, -917470, 1, 0, -851968, 1, 0, -851934, 1, 0, -786432, 1, 0, -786398, 1, 0, -720896, 1, 0, -720862, 1, 0, -655360, 1, 0, -655326, 1, 0, -589824, 1, 0, -589821, 1, 0, -589820, 1, 0, -589819, 1, 0, -589790, 1, 0, -524288, 1, 0, -524285, 1, 0, -524284, 1, 0, -524283, 1, 0, -524254, 1, 0, -458752, 1, 0, -458718, 1, 0, -393216, 1, 0, -393207, 1, 0, -393206, 1, 0, -393205, 1, 0, -393182, 1, 0, -327680, 1, 0, -327671, 1, 0, -327670, 1, 0, -327669, 1, 0, -327646, 1, 0, -262144, 1, 0, -262110, 1, 0, -196608, 1, 0, -196574, 1, 0, -131072, 1, 0, -131057, 1, 0, -131056, 1, 0, -131055, 1, 0, -131050, 1, 0, -131049, 1, 0, -131048, 1, 0, -131047, 1, 0, -131046, 1, 0, -131045, 1, 0, -131044, 1, 0, -131043, 1, 0, -131042, 1, 0, -131041, 1, 0, -131040, 1, 0, -131039, 1, 0, -131038, 1, 0, -65536, 1, 0, -65521, 1, 0, -65520, 1, 0, -65519, 1, 0, -65502, 1, 0, 0, 1, 0, 34, 1, 0, 65536, 1, 0, 65545, 1, 0, 65546, 1, 0, 65547, 1, 0, 65570, 1, 0, 131072, 1, 0, 131081, 1, 0, 131082, 1, 0, 131083, 1, 0, 131106, 1, 0, 196608, 1, 0, 196642, 1, 0, 262144, 1, 0, 262147, 1, 0, 262148, 1, 0, 262149, 1, 0, 262178, 1, 0, 327680, 1, 0, 327683, 1, 0, 327684, 1, 0, 327685, 1, 0, 327714, 1, 0, 393216, 1, 0, 393250, 1, 0, 458752, 1, 0, 458753, 2, 0, 458754, 2, 0, 458755, 2, 0, 458756, 2, 0, 458757, 2, 0, 458758, 2, 0, 458759, 2, 0, 458760, 2, 0, 458761, 2, 0, 458762, 2, 0, 458763, 2, 0, 458764, 2, 0, 458765, 2, 0, 458766, 2, 0, 458767, 2, 0, 458768, 2, 0, 458769, 2, 0, 458770, 2, 0, 458771, 2, 0, 458772, 2, 0, 458773, 2, 0, 458774, 2, 0, 458775, 2, 0, 458776, 2, 0, 458777, 2, 0, 458778, 2, 0, 458779, 2, 0, 458780, 2, 0, 458781, 2, 0, 458782, 2, 0, 458783, 2, 0, 458784, 2, 0, 458785, 2, 0, 458786, 1, 0, 524288, 1, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0, 524304, 0, 0, 524305, 0, 0, 524306, 0, 0, 524307, 0, 0, 524308, 0, 0, 524309, 0, 0, 524310, 0, 0, 524311, 0, 0, 524312, 0, 0, 524313, 0, 0, 524314, 0, 0, 524315, 0, 0, 524316, 0, 0, 524317, 0, 0, 524318, 0, 0, 524319, 0, 0, 524320, 0, 0, 524321, 0, 0, 524322, 0, 0 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 64, 160 )
+position = Vector2( 480, 192 )
 
 [node name="WorldComplete" parent="." instance=ExtResource( 3 )]
-position = Vector2( 544, 32 )
+position = Vector2( 896, -96 )
 next_world = "res://World3.tscn"
+
+[node name="WorldComplete2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1056, -96 )
+next_world = "res://World.tscn"
+
+[node name="Onclick_transport" parent="." instance=ExtResource( 4 )]
+position = Vector2( 128, 64 )
+
+[node name="Onclick_transport2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 320, -32 )
+
+[node name="Onclick_transport3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 480, -128 )
+
+[node name="Onclick_transport4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 320, -256 )
+
+[node name="Onclick_transport5" parent="." instance=ExtResource( 4 )]
+position = Vector2( 128, -352 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 128.0
+margin_top = 32.0
+margin_right = 168.0
+margin_bottom = 46.0
+text = "Level 6"
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 320.0
+margin_top = -64.0
+margin_right = 366.0
+margin_bottom = -50.0
+text = "Level 7"
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 480.0
+margin_top = -160.0
+margin_right = 526.0
+margin_bottom = -146.0
+text = "Level 8"
+
+[node name="Label4" type="Label" parent="."]
+margin_left = 320.0
+margin_top = -288.0
+margin_right = 366.0
+margin_bottom = -274.0
+text = "Level 9"
+
+[node name="Label5" type="Label" parent="."]
+margin_left = 128.0
+margin_top = -384.0
+margin_right = 174.0
+margin_bottom = -370.0
+text = "Level 10"
+
+[node name="Label6" type="Label" parent="."]
+margin_left = 864.0
+margin_top = -128.0
+margin_right = 929.0
+margin_bottom = -114.0
+text = "Next zone"
+
+[node name="Label7" type="Label" parent="."]
+margin_left = 992.0
+margin_top = -128.0
+margin_right = 1082.0
+margin_bottom = -114.0
+text = "Previous zone"
