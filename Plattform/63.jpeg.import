@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/sign down.png-505621f50c43898f6479863366f1974b.stex"
+path="res://.import/63.jpeg-2bfc281a94de0b5cf298d6117938a787.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sign down.png"
-dest_files=[ "res://.import/sign down.png-505621f50c43898f6479863366f1974b.stex" ]
+source_file="res://63.jpeg"
+dest_files=[ "res://.import/63.jpeg-2bfc281a94de0b5cf298d6117938a787.stex" ]
 
 [params]
 

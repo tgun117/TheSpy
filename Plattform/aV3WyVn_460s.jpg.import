@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Char4.png-017d7e06bf0d2fd77b33f7c924167145.stex"
+path="res://.import/aV3WyVn_460s.jpg-affdfe629520f4d7244f35fdacae624c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Char4.png"
-dest_files=[ "res://.import/Char4.png-017d7e06bf0d2fd77b33f7c924167145.stex" ]
+source_file="res://aV3WyVn_460s.jpg"
+dest_files=[ "res://.import/aV3WyVn_460s.jpg-affdfe629520f4d7244f35fdacae624c.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -30,5 +30,5 @@ process/HDR_as_SRGB=false
 process/invert_color=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0
