@@ -3,6 +3,7 @@ extends Area2D
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
+var invisible = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -13,10 +14,13 @@ func _ready():
 #	pass
 
 
-func _on_Area_mouth_input_event(viewport, event, shape_idx):
+func _on_Area_arm_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton:
-		if event.is_pressed():
-			$error_6_a.visible = not $error_6_a.visible
-			$error_6_b.visible = not $error_6_b.visible
-			get_node("/root/IsWork").e = get_node("/root/IsWork").e+1
+		if event.is_pressed() && invisible == true:
+			$error_3_a.visible = not $error_3_a.visible
+			$error_3_b.visible = not $error_3_b.visible
 
+
+func _on_error_3_a_visibility_changed():
+	invisible = false
+	
