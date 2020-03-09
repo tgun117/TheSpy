@@ -17,21 +17,12 @@ _global_script_class_icons={
 
 config/name="TheSpy"
 run/main_scene="res://IsWork.tscn"
-run/disable_stderr=true
 config/icon="res://icon.png"
 
 [autoload]
 
 IsWork="*res://IsWork.tscn"
 IsWorkGD="*res://IsWork.gd"
-
-[input]
-
-MouseClicked={
-"deadzone": 0.5,
-"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
- ]
-}
 
 [rendering]
 
