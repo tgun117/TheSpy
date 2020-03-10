@@ -1,0 +1,203 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://OnClick/IsWork.gd" type="Script" id=1]
+[ext_resource path="res://OnClick/images/std_girl_a.png" type="Texture" id=2]
+[ext_resource path="res://OnClick/images/std_girl_b.png" type="Texture" id=3]
+[ext_resource path="res://OnClick/Area2D.gd" type="Script" id=4]
+[ext_resource path="res://OnClick/images/red_circle.png" type="Texture" id=5]
+[ext_resource path="res://OnClick/Area2D2.gd" type="Script" id=6]
+[ext_resource path="res://OnClick/Area_arm.gd" type="Script" id=7]
+[ext_resource path="res://OnClick/Area_head.gd" type="Script" id=8]
+[ext_resource path="res://OnClick/Area_hand.gd" type="Script" id=9]
+[ext_resource path="res://OnClick/Area_mouth.gd" type="Script" id=10]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 72.1046
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 125.697, 43.9188 )
+
+[sub_resource type="CapsuleShape2D" id=3]
+radius = 127.368
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 349.501, 108.294 )
+
+[sub_resource type="CircleShape2D" id=5]
+radius = 106.923
+
+[sub_resource type="CircleShape2D" id=6]
+radius = 66.8117
+
+[node name="Node2D" type="Node"]
+script = ExtResource( 1 )
+
+[node name="std_girl_a" type="Sprite" parent="."]
+position = Vector2( 480, 540 )
+z_index = -10
+texture = ExtResource( 2 )
+
+[node name="std_girl_b" type="Sprite" parent="."]
+position = Vector2( 1440, 540 )
+z_index = -10
+texture = ExtResource( 3 )
+
+[node name="Area_1" type="Area2D" parent="."]
+script = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area_1"]
+position = Vector2( 221.431, 419.215 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area_1"]
+position = Vector2( 1187.23, 416.49 )
+shape = SubResource( 1 )
+
+[node name="error_1_a" type="Sprite" parent="Area_1"]
+visible = false
+position = Vector2( 229.336, 466.959 )
+scale = Vector2( 0.464275, 1.03018 )
+texture = ExtResource( 5 )
+
+[node name="error_1_b" type="Sprite" parent="Area_1"]
+visible = false
+position = Vector2( 1182.22, 454.653 )
+scale = Vector2( 0.464275, 1.03018 )
+texture = ExtResource( 5 )
+
+[node name="Area_2" type="Area2D" parent="."]
+position = Vector2( -5.01054, 10.0211 )
+script = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area_2"]
+position = Vector2( 508.438, 378.34 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area_2"]
+position = Vector2( 1472.4, 383.526 )
+shape = SubResource( 2 )
+
+[node name="error_2_a" type="Sprite" parent="Area_2"]
+visible = false
+position = Vector2( 505.971, 381.341 )
+scale = Vector2( 1.13582, 0.47182 )
+texture = ExtResource( 5 )
+
+[node name="error_2_b" type="Sprite" parent="Area_2"]
+visible = false
+position = Vector2( 1476.43, 384.857 )
+scale = Vector2( 1.13582, 0.47182 )
+texture = ExtResource( 5 )
+
+[node name="Area_3" type="Area2D" parent="."]
+script = ExtResource( 7 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area_3"]
+position = Vector2( 1503.69, 940.839 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Area_3"]
+position = Vector2( 549.401, 940.839 )
+shape = SubResource( 3 )
+
+[node name="error_3_a" type="Sprite" parent="Area_3"]
+visible = false
+position = Vector2( 550.187, 943.4 )
+texture = ExtResource( 5 )
+
+[node name="error_3_b" type="Sprite" parent="Area_3"]
+visible = false
+position = Vector2( 1503.07, 946.916 )
+texture = ExtResource( 5 )
+
+[node name="Area_4" type="Area2D" parent="."]
+script = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area_4"]
+position = Vector2( 433.016, 140.559 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area_4"]
+position = Vector2( 1386.6, 158.315 )
+shape = SubResource( 4 )
+
+[node name="error_4_a" type="Sprite" parent="Area_4"]
+visible = false
+position = Vector2( 438.548, 143.472 )
+scale = Vector2( 3.10517, 1 )
+texture = ExtResource( 5 )
+
+[node name="error_4_b" type="Sprite" parent="Area_4"]
+visible = false
+position = Vector2( 1393.19, 155.778 )
+scale = Vector2( 3.10517, 1 )
+texture = ExtResource( 5 )
+
+[node name="Area_5" type="Area2D" parent="."]
+position = Vector2( 227.578, 458.805 )
+script = ExtResource( 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area_5"]
+position = Vector2( 493.67, 313.994 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area_5"]
+position = Vector2( 1458.95, 326.652 )
+shape = SubResource( 5 )
+
+[node name="error_5_a" type="Sprite" parent="Area_5"]
+visible = false
+position = Vector2( 496.659, 317.577 )
+texture = ExtResource( 5 )
+
+[node name="error_5_b" type="Sprite" parent="Area_5"]
+visible = false
+position = Vector2( 1465.36, 326.367 )
+texture = ExtResource( 5 )
+
+[node name="Area_6" type="Area2D" parent="."]
+position = Vector2( 1435.12, 699.311 )
+script = ExtResource( 10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area_6"]
+position = Vector2( -914.555, -156.469 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area_6"]
+position = Vector2( 46.0616, -154.887 )
+shape = SubResource( 6 )
+
+[node name="error_6_a" type="Sprite" parent="Area_6"]
+visible = false
+position = Vector2( -906.908, -144.448 )
+scale = Vector2( 0.539729, 0.45673 )
+texture = ExtResource( 5 )
+
+[node name="error_6_b" type="Sprite" parent="Area_6"]
+visible = false
+position = Vector2( 53.0061, -151.48 )
+scale = Vector2( 0.539729, 0.45673 )
+texture = ExtResource( 5 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 960, 540 )
+current = true
+zoom = Vector2( 3, 3 )
+[connection signal="input_event" from="Area_1" to="Area_1" method="_on_Area2D_input_event"]
+[connection signal="visibility_changed" from="Area_1/error_1_a" to="." method="_on_error_1_a_visibility_changed"]
+[connection signal="visibility_changed" from="Area_1/error_1_a" to="Area_1" method="_on_error_1_a_visibility_changed"]
+[connection signal="input_event" from="Area_2" to="Area_2" method="_on_Area2D2_input_event"]
+[connection signal="visibility_changed" from="Area_2/error_2_a" to="." method="_on_error_2_a_visibility_changed"]
+[connection signal="visibility_changed" from="Area_2/error_2_a" to="Area_2" method="_on_error_2_a_visibility_changed"]
+[connection signal="input_event" from="Area_3" to="Area_3" method="_on_Area_arm_input_event"]
+[connection signal="visibility_changed" from="Area_3/error_3_a" to="." method="_on_error_3_a_visibility_changed"]
+[connection signal="visibility_changed" from="Area_3/error_3_a" to="Area_3" method="_on_error_3_a_visibility_changed"]
+[connection signal="input_event" from="Area_4" to="Area_4" method="_on_Area_head_input_event"]
+[connection signal="visibility_changed" from="Area_4/error_4_a" to="." method="_on_error_4_a_visibility_changed"]
+[connection signal="visibility_changed" from="Area_4/error_4_a" to="Area_4" method="_on_error_4_a_visibility_changed"]
+[connection signal="input_event" from="Area_5" to="Area_5" method="_on_Area_hand_input_event"]
+[connection signal="visibility_changed" from="Area_5/error_5_a" to="." method="_on_error_5_a_visibility_changed"]
+[connection signal="visibility_changed" from="Area_5/error_5_a" to="Area_5" method="_on_error_5_a_visibility_changed"]
+[connection signal="input_event" from="Area_6" to="Area_6" method="_on_Area_mouth_input_event"]
+[connection signal="visibility_changed" from="Area_6/error_6_a" to="." method="_on_error_6_a_visibility_changed"]
+[connection signal="visibility_changed" from="Area_6/error_6_a" to="Area_6" method="_on_error_6_a_visibility_changed"]
