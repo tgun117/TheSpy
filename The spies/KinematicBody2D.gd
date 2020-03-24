@@ -6,6 +6,7 @@ const SPEED = 300
 const JUMP_HEIGHT = -670
 
 var motion = Vector2()
+var health = 5
 
 func _physics_process(delta):
 	motion.y += GRAVITY
@@ -22,4 +23,15 @@ func _physics_process(delta):
 			motion.y = JUMP_HEIGHT
 	
 	motion = move_and_slide(motion, UP)
+	_update_hp()
+	_update_sprite()
 	pass
+
+func _update_hp():
+	health = PlayerNode.health
+	get_node("Camera2D/Label").set_text("HP: " + str(health))
+	
+func _update_sprite():
+	var localsprite = get_node("/root/PlayerNode/Sprite").get_texture()
+	get_node("Sprite").set_texture(localsprite)
+	
