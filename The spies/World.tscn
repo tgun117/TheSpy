@@ -83,3 +83,10 @@ text = "Next zone"
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
 position = Vector2( -864, 320 )
+
+[node name="Label7" type="Label" parent="."]
+margin_left = 512.0
+margin_top = -448.0
+margin_right = 1016.0
+margin_bottom = -434.0
+text = "Sir. Harry Edwards Pennywinkle Harrington jr. the 2nd and 3rd Esquire was here"
