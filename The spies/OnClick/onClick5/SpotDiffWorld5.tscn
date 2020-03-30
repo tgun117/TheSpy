@@ -170,9 +170,12 @@ current = true
 zoom = Vector2( 2, 4 )
 
 [node name="Label" type="Label" parent="."]
-margin_right = 40.0
-margin_bottom = 14.0
-custom_colors/font_color = Color( 0.803922, 0.027451, 0.027451, 1 )
+margin_left = 61.8803
+margin_top = 52.3602
+margin_right = 215.88
+margin_bottom = 129.36
+rect_scale = Vector2( 2, 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 script = ExtResource( 10 )
 
 [node name="Timer" type="Timer" parent="Label"]
@@ -196,5 +199,5 @@ script = ExtResource( 10 )
 [connection signal="input_event" from="Area2D5" to="." method="_on_Area2D5_input_event"]
 [connection signal="visibility_changed" from="Area2D5/diff_5_a" to="Area2D5" method="_on_diff_5_a_visibility_changed"]
 [connection signal="visibility_changed" from="Area2D5/diff_5_a" to="." method="_on_diff_5_a_visibility_changed"]
-[connection signal="timeout" from="Label/Timer" to="." method="_on_Timer_timeout"]
 [connection signal="timeout" from="Label/Timer" to="Label" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Label/Timer" to="." method="_on_Timer_timeout"]

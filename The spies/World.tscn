@@ -9,7 +9,7 @@
 
 [node name="WorldComplete" parent="." instance=ExtResource( 1 )]
 position = Vector2( 960, 384 )
-next_world = "res://World2.tscn"
+next_world = "res://Start_screen.tscn"
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 2 )
@@ -34,11 +34,11 @@ next_onclick = "res://OnClick/onClick3/spotDiff3.tscn"
 
 [node name="Onclick_transport4" parent="." instance=ExtResource( 3 )]
 position = Vector2( 288, -64 )
-next_onclick = "res://World2.tscn"
+next_onclick = "res://OnClick/onClick4/SpotDiffWorld4.tscn"
 
 [node name="Onclick_transport5" parent="." instance=ExtResource( 3 )]
 position = Vector2( 576, -160 )
-next_onclick = "res://Shop/Shop.tscn"
+next_onclick = "res://OnClick/onClick5/SpotDiffWorld5.tscn"
 
 [node name="Label" type="Label" parent="."]
 margin_left = -544.0
@@ -75,11 +75,11 @@ margin_bottom = -178.0
 text = "Level 5"
 
 [node name="Label6" type="Label" parent="."]
-margin_left = 928.0
-margin_top = 334.0
-margin_right = 974.0
-margin_bottom = 348.0
-text = "Next zone"
+margin_left = 862.0
+margin_top = 335.0
+margin_right = 989.0
+margin_bottom = 349.0
+text = "Back to start screen"
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
 position = Vector2( -864, 320 )
