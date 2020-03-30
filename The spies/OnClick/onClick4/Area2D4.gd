@@ -4,6 +4,7 @@ extends Area2D
 # var a = 2
 # var b = "text"
 var invisible = true
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -12,12 +13,11 @@ func _ready():
 #func _process(delta):
 #	pass
 
-func _on_Area2D2_input_event(viewport, event, shape_idx):
+func _on_Area2D4_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton:
 		if event.is_pressed() && invisible == true:
-			$error_2_a.visible = not $error_2_a.visible
-			$error_2_b.visible = not $error_2_b.visible
+			$diff_4_a.visible = not $diff_4_a.visible
+			$diff_4_b.visible = not $diff_4_b.visible
 
-
-func _on_error_2_a_visibility_changed():
+func _on_diff_4_a_visibility_changed():
 	invisible = false

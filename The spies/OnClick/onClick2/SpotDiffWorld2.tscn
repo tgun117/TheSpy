@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://OnClick/onClick2/SpotDiffWorld2.gd" type="Script" id=1]
 [ext_resource path="res://OnClick/images/STDImg5.png" type="Texture" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://OnClick/onClick2/Diff2.gd" type="Script" id=6]
 [ext_resource path="res://OnClick/onClick2/Diff3.gd" type="Script" id=7]
 [ext_resource path="res://OnClick/onClick2/Diff4.gd" type="Script" id=8]
+[ext_resource path="res://OnClick/onClick2/Label.gd" type="Script" id=9]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 40.0
@@ -127,22 +128,24 @@ position = Vector2( 1630, 2270 )
 scale = Vector2( 0.528971, 0.285408 )
 texture = ExtResource( 5 )
 
-[node name="Area2D5" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D5"]
-
-[node name="Sprite" type="Sprite" parent="Area2D5"]
-
-[node name="Area2D6" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D6"]
-
-[node name="Sprite" type="Sprite" parent="Area2D6"]
-
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 1020, 1220 )
 current = true
 zoom = Vector2( 3.2, 6.65 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+margin_left = 40.0
+margin_top = 20.0
+margin_right = 280.0
+margin_bottom = 110.0
+custom_colors/font_color = Color( 0.803922, 0.027451, 0.027451, 1 )
+custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
+script = ExtResource( 9 )
+
+[node name="Timer" type="Timer" parent="CanvasLayer/Label"]
+autostart = true
 [connection signal="input_event" from="Area2D" to="Area2D" method="_on_Area2D_input_event"]
 [connection signal="visibility_changed" from="Area2D/diff_1_a" to="Area2D" method="_on_diff_1_a_visibility_changed"]
 [connection signal="visibility_changed" from="Area2D/diff_1_a" to="." method="_on_diff_1_a_visibility_changed"]
@@ -155,3 +158,5 @@ zoom = Vector2( 3.2, 6.65 )
 [connection signal="input_event" from="Area2D4" to="Area2D4" method="_on_Area2D4_input_event"]
 [connection signal="visibility_changed" from="Area2D4/diff_4_a" to="Area2D4" method="_on_diff_4_a_visibility_changed"]
 [connection signal="visibility_changed" from="Area2D4/diff_4_a" to="." method="_on_diff_4_a_visibility_changed"]
+[connection signal="timeout" from="CanvasLayer/Label/Timer" to="CanvasLayer/Label" method="_on_Timer_timeout"]
+[connection signal="timeout" from="CanvasLayer/Label/Timer" to="." method="_on_Timer_timeout"]

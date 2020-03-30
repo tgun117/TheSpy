@@ -1,8 +1,8 @@
 extends Node2D
 
-var time = 120
 var e = 0
 const total_errors = 5
+var time = 120
 
 func _on_diff_1_a_visibility_changed():
 	e += 1

@@ -1,41 +1,41 @@
 [gd_scene load_steps=16 format=2]
 
-[ext_resource path="res://OnClick/onClick3/spotDiff3.gd" type="Script" id=1]
-[ext_resource path="res://OnClick/images/STDImg4.jpg" type="Texture" id=2]
-[ext_resource path="res://OnClick/images/STDImg4.1.png" type="Texture" id=3]
-[ext_resource path="res://OnClick/onClick3/diff1.gd" type="Script" id=4]
+[ext_resource path="res://OnClick/onClick4/SpotDiffWorld4.gd" type="Script" id=1]
+[ext_resource path="res://OnClick/images/STDImg2.1.png" type="Texture" id=2]
+[ext_resource path="res://OnClick/images/STDImg2.png" type="Texture" id=3]
+[ext_resource path="res://OnClick/onClick4/Area2D.gd" type="Script" id=4]
 [ext_resource path="res://OnClick/images/red_circle.png" type="Texture" id=5]
-[ext_resource path="res://OnClick/onClick3/Diff2.gd" type="Script" id=6]
-[ext_resource path="res://OnClick/onClick3/Diff3.gd" type="Script" id=7]
-[ext_resource path="res://OnClick/onClick3/Diff4.gd" type="Script" id=8]
-[ext_resource path="res://OnClick/onClick3/Diff5.gd" type="Script" id=9]
-[ext_resource path="res://OnClick/onClick3/Label.gd" type="Script" id=10]
+[ext_resource path="res://OnClick/onClick4/Area2D2.gd" type="Script" id=6]
+[ext_resource path="res://OnClick/onClick4/Area2D3.gd" type="Script" id=7]
+[ext_resource path="res://OnClick/onClick4/Area2D4.gd" type="Script" id=8]
+[ext_resource path="res://OnClick/onClick4/Area2D5.gd" type="Script" id=9]
+[ext_resource path="res://OnClick/onClick4/Label.gd" type="Script" id=10]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 36.0555
+radius = 10.7936
 
 [sub_resource type="CircleShape2D" id=2]
-radius = 30.0
+radius = 11.7727
 
 [sub_resource type="CircleShape2D" id=3]
-radius = 31.6228
+radius = 27.8497
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 40, 50 )
+extents = Vector2( 6.12951, 13.9391 )
 
 [sub_resource type="CircleShape2D" id=5]
-radius = 40.0
+radius = 9.59096
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 640, 370 )
+[node name="SpriteA" type="Sprite" parent="."]
+position = Vector2( 160, 240 )
 z_index = -10
 texture = ExtResource( 2 )
 
-[node name="Sprite2" type="Sprite" parent="."]
-position = Vector2( 640, -370 )
+[node name="SpriteB" type="Sprite" parent="."]
+position = Vector2( 490, 240 )
 z_index = -10
 texture = ExtResource( 3 )
 
@@ -43,129 +43,125 @@ texture = ExtResource( 3 )
 script = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 760, -360 )
+position = Vector2( 242.126, 53.0907 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 760, 380 )
+position = Vector2( 572.736, 49.8731 )
 shape = SubResource( 1 )
 
 [node name="diff_1_a" type="Sprite" parent="Area2D"]
 visible = false
-position = Vector2( 760, -360 )
-scale = Vector2( 0.314378, 0.335837 )
+position = Vector2( 242.107, 53.1051 )
+scale = Vector2( 0.0954764, 0.102381 )
 texture = ExtResource( 5 )
 
 [node name="diff_1_b" type="Sprite" parent="Area2D"]
 visible = false
-position = Vector2( 760, 380 )
-scale = Vector2( 0.314378, 0.335837 )
+position = Vector2( 572.86, 49.6848 )
+scale = Vector2( 0.0954764, 0.102381 )
 texture = ExtResource( 5 )
 
 [node name="Area2D2" type="Area2D" parent="."]
 script = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
-position = Vector2( 820, -400 )
+position = Vector2( 120.661, 394.963 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D2"]
-position = Vector2( 810, 330 )
+position = Vector2( 451.271, 394.963 )
 shape = SubResource( 2 )
 
 [node name="diff_2_a" type="Sprite" parent="Area2D2"]
 visible = false
-position = Vector2( 810, 330 )
-scale = Vector2( 0.271459, 0.292918 )
+position = Vector2( 120.616, 394.477 )
+scale = Vector2( 0.096991, 0.101682 )
 texture = ExtResource( 5 )
 
 [node name="diff_2_b" type="Sprite" parent="Area2D2"]
 visible = false
-position = Vector2( 820, -399.125 )
-scale = Vector2( 0.271459, 0.292918 )
+position = Vector2( 450.899, 394.813 )
+scale = Vector2( 0.096991, 0.101682 )
 texture = ExtResource( 5 )
 
 [node name="Area2D3" type="Area2D" parent="."]
 script = ExtResource( 7 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
-position = Vector2( 210, 290 )
+position = Vector2( 160.077, 385.31 )
 shape = SubResource( 3 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D3"]
-position = Vector2( 210, -450 )
+position = Vector2( 491.491, 385.31 )
 shape = SubResource( 3 )
 
 [node name="diff_3_a" type="Sprite" parent="Area2D3"]
 visible = false
-position = Vector2( 210, -450 )
-scale = Vector2( 0.285408, 0.285408 )
+position = Vector2( 160.479, 385.31 )
+scale = Vector2( 0.237024, 0.233571 )
 texture = ExtResource( 5 )
 
 [node name="diff_3_b" type="Sprite" parent="Area2D3"]
 visible = false
-position = Vector2( 210, 290 )
-scale = Vector2( 0.285408, 0.285408 )
+position = Vector2( 491.089, 385.31 )
+scale = Vector2( 0.237024, 0.233571 )
 texture = ExtResource( 5 )
 
 [node name="Area2D4" type="Area2D" parent="."]
 script = ExtResource( 8 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D4"]
-position = Vector2( 500, -440 )
+position = Vector2( 47.4599, 252.583 )
 shape = SubResource( 4 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D4"]
-position = Vector2( 480, 290 )
+position = Vector2( 379.679, 250.17 )
 shape = SubResource( 4 )
 
 [node name="diff_4_a" type="Sprite" parent="Area2D4"]
 visible = false
-position = Vector2( 500, -440 )
-scale = Vector2( 0.371245, 0.5 )
+position = Vector2( 47.705, 252.582 )
+scale = Vector2( 0.0915061, 0.157101 )
 texture = ExtResource( 5 )
 
 [node name="diff_4_b" type="Sprite" parent="Area2D4"]
 visible = false
-position = Vector2( 480, 290 )
-scale = Vector2( 0.371245, 0.5 )
+position = Vector2( 377.894, 249.973 )
+scale = Vector2( 0.0915061, 0.157101 )
 texture = ExtResource( 5 )
 
 [node name="Area2D5" type="Area2D" parent="."]
 script = ExtResource( 9 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D5"]
-position = Vector2( 380, -580 )
+position = Vector2( 221.211, 382.092 )
 shape = SubResource( 5 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D5"]
-position = Vector2( 390, 150 )
+position = Vector2( 551.017, 384.505 )
 shape = SubResource( 5 )
 
 [node name="diff_5_a" type="Sprite" parent="Area2D5"]
 visible = false
-position = Vector2( 380, -580 )
-scale = Vector2( 0.378755, 0.378755 )
+position = Vector2( 221.317, 381.933 )
+scale = Vector2( 0.074675, 0.0750824 )
 texture = ExtResource( 5 )
 
 [node name="diff_5_b" type="Sprite" parent="Area2D5"]
 visible = false
-position = Vector2( 390, 150 )
-scale = Vector2( 0.378755, 0.378755 )
+position = Vector2( 551.134, 384.42 )
+scale = Vector2( 0.074675, 0.0750824 )
 texture = ExtResource( 5 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 640, 0 )
+position = Vector2( 324.243, 240 )
 current = true
-zoom = Vector2( 2, 4.1 )
+zoom = Vector2( 1.02, 1.35 )
 
 [node name="Label" type="Label" parent="."]
-margin_left = 40.0
-margin_top = -710.0
-margin_right = 110.0
-margin_bottom = -670.0
-rect_scale = Vector2( 2, 2 )
-custom_colors/font_color = Color( 0.803922, 0.027451, 0.027451, 1 )
+margin_right = 40.0
+margin_bottom = 14.0
 script = ExtResource( 10 )
 
 [node name="Timer" type="Timer" parent="Label"]
@@ -179,10 +175,10 @@ script = ExtResource( 10 )
 [connection signal="visibility_changed" from="Area2D3/diff_3_a" to="Area2D3" method="_on_diff_3_a_visibility_changed"]
 [connection signal="visibility_changed" from="Area2D3/diff_3_a" to="." method="_on_diff_3_a_visibility_changed"]
 [connection signal="input_event" from="Area2D4" to="Area2D4" method="_on_Area2D4_input_event"]
-[connection signal="visibility_changed" from="Area2D4/diff_4_a" to="Area2D4" method="_on_diff_4_a_visibility_changed"]
 [connection signal="visibility_changed" from="Area2D4/diff_4_a" to="." method="_on_diff_4_a_visibility_changed"]
+[connection signal="visibility_changed" from="Area2D4/diff_4_a" to="Area2D4" method="_on_diff_4_a_visibility_changed"]
 [connection signal="input_event" from="Area2D5" to="Area2D5" method="_on_Area2D5_input_event"]
-[connection signal="visibility_changed" from="Area2D5/diff_5_a" to="Area2D5" method="_on_diff_5_a_visibility_changed"]
 [connection signal="visibility_changed" from="Area2D5/diff_5_a" to="." method="_on_diff_5_a_visibility_changed"]
+[connection signal="visibility_changed" from="Area2D5/diff_5_a" to="Area2D5" method="_on_diff_5_a_visibility_changed"]
 [connection signal="timeout" from="Label/Timer" to="." method="_on_Timer_timeout"]
 [connection signal="timeout" from="Label/Timer" to="Label" method="_on_Timer_timeout"]

@@ -2,7 +2,7 @@ extends Node2D
 
 var time = 120
 var e = 0
-const total_errors = 5
+const total_diffs = 5
 
 func _on_diff_1_a_visibility_changed():
 	e += 1
@@ -30,9 +30,8 @@ func _on_diff_5_a_visibility_changed():
 	_warp_out()
 
 func _warp_out():
-	if e == total_errors:
+	if e == total_diffs:
 		get_tree().change_scene("res://OnClick/VictoryScreen.tscn")
-
 
 func _time_ran_out():
 	if time == 0:
