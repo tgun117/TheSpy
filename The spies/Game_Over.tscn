@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Start_screen.gd" type="Script" id=1]
+
+[node name="Game Over" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 317.292, 178.953 )
+current = true
+
+[node name="Game Over text" type="Label" parent="."]
+margin_left = 288.0
+margin_top = 160.0
+margin_right = 361.0
+margin_bottom = 174.0
+text = "Game Over"
+
+[node name="Score counter" type="Label" parent="."]
+margin_left = 512.0
+margin_top = 32.0
+margin_right = 597.0
+margin_bottom = 46.0
+text = "Total Score: x"
+
+[node name="Start_screen" type="Button" parent="."]
+margin_left = 256.0
+margin_top = 192.0
+margin_right = 384.0
+margin_bottom = 256.0
+text = "Main Menu"
+script = ExtResource( 1 )
