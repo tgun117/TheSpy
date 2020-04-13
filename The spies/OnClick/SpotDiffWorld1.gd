@@ -4,7 +4,7 @@ extends Node2D
 var e = 0   #A variable to store how many diffs are found
 const total_diffs = 6 #Total number of diffs
 var time = 120 #A variable for the timer, in seconds
-var hp = 10
+var hp = PlayerNode.health*2
 var diff_found = false
 var found = false
 
@@ -53,6 +53,7 @@ func _on_diff_6_a_visibility_changed():
 #A function to warp you back to the level selector if all diffs are found
 func _warp_out():
 	if e == total_diffs:
+		PlayerNode.health = hp/2
 		get_tree().change_scene("res://OnClick/VictoryScreen.tscn")
 
 #A function that takes you to the game over screen when the timer runs out

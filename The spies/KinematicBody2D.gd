@@ -6,7 +6,11 @@ const SPEED = 300
 const JUMP_HEIGHT = -670
 
 var motion = Vector2()
-var health = 5
+var health
+
+func _ready():
+	_get_current_hp()
+	_update_hp()
 
 func _physics_process(delta):
 	motion.y += GRAVITY
@@ -34,4 +38,11 @@ func _update_hp():
 func _update_sprite():
 	var localsprite = get_node("/root/PlayerNode/Sprite").get_texture()
 	get_node("Sprite").set_texture(localsprite)
-	
+
+func _get_current_hp():
+	if PlayerNode.health == null:
+		health = 5
+		print("Health not found")
+	else:
+		health = PlayerNode.health
+		print("Health found")
