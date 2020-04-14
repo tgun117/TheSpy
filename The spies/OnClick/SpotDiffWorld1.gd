@@ -54,6 +54,8 @@ func _on_diff_6_a_visibility_changed():
 func _warp_out():
 	if e == total_diffs:
 		PlayerNode.health = hp/2
+		PlayerNode.recent_reward = time / 2
+		PlayerNode.coins += time / 2
 		get_tree().change_scene("res://OnClick/VictoryScreen.tscn")
 
 #A function that takes you to the game over screen when the timer runs out
