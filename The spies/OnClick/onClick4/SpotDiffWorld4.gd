@@ -37,7 +37,7 @@ func _warp_out():
 func _time_ran_out():
 	if time == 0:
 		print("Game Over(Time)")
-		get_tree().change_scene("World.tscn")
+		get_tree().change_scene("res://Game_Over.tscn")
 
 
 func _on_Timer_timeout():

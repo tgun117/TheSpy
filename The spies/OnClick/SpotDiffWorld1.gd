@@ -60,12 +60,12 @@ func _warp_out():
 func _time_ran_out():
 	if time == 0:
 		print("Game Over(Time)")
-		get_tree().change_scene("res://Start_screen.tscn")
+		get_tree().change_scene("res://Game_Over.tscn")
 
 func _lost_all_hp():
 	if hp == 0:
 		print("Game Over(HP)")
-		get_tree().change_scene("res://Start_screen.tscn")
+		get_tree().change_scene("res://Game_Over.tscn")
 
 #A function to decrease the timer after a second, and check the current HP
 func _on_Timer_timeout():
