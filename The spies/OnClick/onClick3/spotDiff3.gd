@@ -31,6 +31,9 @@ func _on_diff_5_a_visibility_changed():
 
 func _warp_out():
 	if e == total_errors:
+		
+		PlayerNode.recent_reward = time / 2
+		PlayerNode.coins += time / 2
 		get_tree().change_scene("res://OnClick/VictoryScreen.tscn")
 
 

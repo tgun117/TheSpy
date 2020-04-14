@@ -1,11 +1,13 @@
 extends Button
 
+const cost = 50
 var Char_sprite = preload("res://Char3.png")
 
 
 func _pressed():
-	""" Add a if player has the required money here """
-	get_node("/root/PlayerNode/Sprite").set_texture(Char_sprite)
+	if PlayerNode.coins >= cost:
+		PlayerNode.coins -= cost
+		get_node("/root/PlayerNode/Sprite").set_texture(Char_sprite)
 
 
 
