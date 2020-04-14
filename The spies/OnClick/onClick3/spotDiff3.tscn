@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://OnClick/onClick3/spotDiff3.gd" type="Script" id=1]
 [ext_resource path="res://OnClick/images/STDImg4.jpg" type="Texture" id=2]
@@ -25,6 +25,9 @@ extents = Vector2( 40, 50 )
 
 [sub_resource type="CircleShape2D" id=5]
 radius = 40.0
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 324.524, 377.298 )
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
@@ -154,6 +157,14 @@ position = Vector2( 390, 150 )
 scale = Vector2( 0.378755, 0.378755 )
 texture = ExtResource( 5 )
 
+[node name="Area2D6" type="Area2D" parent="."]
+position = Vector2( 5.87262, -655.138 )
+scale = Vector2( 2, 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D6"]
+position = Vector2( 317.123, 327.401 )
+shape = SubResource( 6 )
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 640, 0 )
 current = true
@@ -169,20 +180,29 @@ custom_colors/font_color = Color( 0.803922, 0.027451, 0.027451, 1 )
 script = ExtResource( 10 )
 
 [node name="Timer" type="Timer" parent="Label"]
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 130.0
+margin_top = -710.0
+margin_right = 296.0
+margin_bottom = -634.0
+rect_scale = Vector2( 1.75, 1.9 )
+custom_colors/font_color = Color( 0.196078, 0.776471, 0.329412, 1 )
 [connection signal="input_event" from="Area2D" to="Area2D" method="_on_Area2D_input_event"]
-[connection signal="visibility_changed" from="Area2D/diff_1_a" to="Area2D" method="_on_diff_1_a_visibility_changed"]
 [connection signal="visibility_changed" from="Area2D/diff_1_a" to="." method="_on_diff_1_a_visibility_changed"]
+[connection signal="visibility_changed" from="Area2D/diff_1_a" to="Area2D" method="_on_diff_1_a_visibility_changed"]
 [connection signal="input_event" from="Area2D2" to="Area2D2" method="_on_Area2D2_input_event"]
-[connection signal="visibility_changed" from="Area2D2/diff_2_a" to="Area2D2" method="_on_diff_2_a_visibility_changed"]
 [connection signal="visibility_changed" from="Area2D2/diff_2_a" to="." method="_on_diff_2_a_visibility_changed"]
+[connection signal="visibility_changed" from="Area2D2/diff_2_a" to="Area2D2" method="_on_diff_2_a_visibility_changed"]
 [connection signal="input_event" from="Area2D3" to="Area2D3" method="_on_Area2D3_input_event"]
-[connection signal="visibility_changed" from="Area2D3/diff_3_a" to="Area2D3" method="_on_diff_3_a_visibility_changed"]
 [connection signal="visibility_changed" from="Area2D3/diff_3_a" to="." method="_on_diff_3_a_visibility_changed"]
+[connection signal="visibility_changed" from="Area2D3/diff_3_a" to="Area2D3" method="_on_diff_3_a_visibility_changed"]
 [connection signal="input_event" from="Area2D4" to="Area2D4" method="_on_Area2D4_input_event"]
-[connection signal="visibility_changed" from="Area2D4/diff_4_a" to="Area2D4" method="_on_diff_4_a_visibility_changed"]
 [connection signal="visibility_changed" from="Area2D4/diff_4_a" to="." method="_on_diff_4_a_visibility_changed"]
+[connection signal="visibility_changed" from="Area2D4/diff_4_a" to="Area2D4" method="_on_diff_4_a_visibility_changed"]
 [connection signal="input_event" from="Area2D5" to="Area2D5" method="_on_Area2D5_input_event"]
-[connection signal="visibility_changed" from="Area2D5/diff_5_a" to="Area2D5" method="_on_diff_5_a_visibility_changed"]
 [connection signal="visibility_changed" from="Area2D5/diff_5_a" to="." method="_on_diff_5_a_visibility_changed"]
+[connection signal="visibility_changed" from="Area2D5/diff_5_a" to="Area2D5" method="_on_diff_5_a_visibility_changed"]
+[connection signal="input_event" from="Area2D6" to="." method="_on_Area2D6_input_event"]
 [connection signal="timeout" from="Label/Timer" to="Label" method="_on_Timer_timeout"]
 [connection signal="timeout" from="Label/Timer" to="." method="_on_Timer_timeout"]

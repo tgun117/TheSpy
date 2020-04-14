@@ -197,6 +197,7 @@ scale = Vector2( 0.52897, 0.292918 )
 texture = ExtResource( 5 )
 
 [node name="Area2D7" type="Area2D" parent="."]
+z_index = -1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D7"]
 position = Vector2( 610, 350 )
@@ -253,7 +254,7 @@ margin_top = 45.0
 margin_right = 145.0
 margin_bottom = 105.0
 rect_scale = Vector2( 1.3, 1.3 )
-custom_colors/font_color = Color( 0.803922, 0.027451, 0.027451, 1 )
+custom_colors/font_color = Color( 0.196078, 0.776471, 0.329412, 1 )
 clip_text = true
 [connection signal="input_event" from="Area2D" to="Area2D" method="_on_Area2D_input_event"]
 [connection signal="visibility_changed" from="Area2D/diff_1_a" to="Area2D" method="_on_diff_1_a_visibility_changed"]
@@ -275,5 +276,5 @@ clip_text = true
 [connection signal="visibility_changed" from="Area2D6/diff_6_a" to="." method="_on_diff_6_a_visibility_changed"]
 [connection signal="input_event" from="Area2D7" to="." method="_on_Area2D7_input_event"]
 [connection signal="pressed" from="Label/Button" to="Label" method="_on_Button_pressed"]
-[connection signal="timeout" from="Label2/Timer" to="." method="_on_Timer_timeout"]
 [connection signal="timeout" from="Label2/Timer" to="Label2" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Label2/Timer" to="." method="_on_Timer_timeout"]
