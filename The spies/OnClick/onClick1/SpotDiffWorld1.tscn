@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://OnClick/SpotDiffWorld1.gd" type="Script" id=1]
 [ext_resource path="res://OnClick/images/STDImg3.1.png" type="Texture" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://OnClick/Diff6.gd" type="Script" id=10]
 [ext_resource path="res://OnClick/onClick1/Label.gd" type="Script" id=11]
 [ext_resource path="res://OnClick/onClick1/Label2.gd" type="Script" id=12]
+[ext_resource path="res://OnClick/images/OrangeBackground.png" type="Texture" id=13]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 14.1421
@@ -48,9 +49,9 @@ z_index = -10
 texture = ExtResource( 3 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 610, 350 )
+position = Vector2( 610, 365 )
 current = true
-zoom = Vector2( 1.9, 1.95 )
+zoom = Vector2( 2, 2.15 )
 
 [node name="Area2D" type="Area2D" parent="."]
 z_index = 1
@@ -211,6 +212,7 @@ margin_right = 635.0
 margin_bottom = 350.0
 rect_scale = Vector2( 2, 2 )
 size_flags_stretch_ratio = 0.0
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 text = "Welcome to level 1:
 
 To complete the level you
@@ -237,25 +239,42 @@ margin_bottom = 135.0
 text = "OK"
 
 [node name="Label2" type="Label" parent="."]
-margin_left = 62.0
-margin_top = 20.0
-margin_right = 132.0
-margin_bottom = 50.0
+margin_left = 575.0
+margin_top = 710.0
+margin_right = 655.0
+margin_bottom = 770.0
 rect_scale = Vector2( 2, 2 )
 custom_colors/font_color = Color( 0.803922, 0.027451, 0.027451, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 uppercase = true
 script = ExtResource( 12 )
 
 [node name="Timer" type="Timer" parent="Label2"]
 
+[node name="Label4" type="Label" parent="."]
+margin_left = 1130.0
+margin_top = 710.0
+margin_right = 1210.0
+margin_bottom = 770.0
+rect_scale = Vector2( 2, 2 )
+custom_colors/font_color = Color( 0.121569, 0.509804, 0.211765, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+
 [node name="Label3" type="Label" parent="."]
-margin_left = 65.0
-margin_top = 45.0
-margin_right = 145.0
-margin_bottom = 105.0
-rect_scale = Vector2( 1.3, 1.3 )
-custom_colors/font_color = Color( 0.196078, 0.776471, 0.329412, 1 )
+margin_left = 60.0
+margin_top = 710.0
+margin_right = 140.0
+margin_bottom = 770.0
+rect_scale = Vector2( 2, 2 )
+custom_colors/font_color = Color( 0.121569, 0.509804, 0.211765, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 clip_text = true
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( 504.616, 246.192 )
+scale = Vector2( 2.59109, 2.15614 )
+z_index = -100
+texture = ExtResource( 13 )
 [connection signal="input_event" from="Area2D" to="Area2D" method="_on_Area2D_input_event"]
 [connection signal="visibility_changed" from="Area2D/diff_1_a" to="Area2D" method="_on_diff_1_a_visibility_changed"]
 [connection signal="visibility_changed" from="Area2D/diff_1_a" to="." method="_on_diff_1_a_visibility_changed"]

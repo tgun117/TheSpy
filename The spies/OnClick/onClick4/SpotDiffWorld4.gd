@@ -1,44 +1,52 @@
 extends Node2D
 
 var e = 0
-const total_errors = 5
+const total_diffs = 5
 var time = 120
 var hp = PlayerNode.health*2
 var found = false
 var diff_found = false
 
+func _ready():
+	$Label2.set_text(str("0/",total_diffs))
+
 func _on_diff_1_a_visibility_changed():
 	e += 1
 	print (e)
+	$Label2.set_text(str(e,"/",total_diffs))
 	found =true
 	_warp_out()
 
 func _on_diff_2_a_visibility_changed():
 	e += 1
 	print (e)
+	$Label2.set_text(str(e,"/",total_diffs))
 	found =true
 	_warp_out()
 
 func _on_diff_3_a_visibility_changed():
 	e += 1
 	print (e)
+	$Label2.set_text(str(e,"/",total_diffs))
 	found =true
 	_warp_out()
 
 func _on_diff_4_a_visibility_changed():
 	e += 1
 	print (e)
+	$Label2.set_text(str(e,"/",total_diffs))
 	found =true
 	_warp_out()
 
 func _on_diff_5_a_visibility_changed():
 	e += 1
 	print (e)
+	$Label2.set_text(str(e,"/",total_diffs))
 	found =true
 	_warp_out()
 
 func _warp_out():
-	if e == total_errors:
+	if e == total_diffs:
 		get_tree().change_scene("res://OnClick/VictoryScreen.tscn")
 
 

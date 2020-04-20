@@ -8,10 +8,14 @@ var hp = PlayerNode.health*2
 var diff_found = false
 var found = false
 
+func _ready():
+	$Label4.set_text(str("0/",total_diffs))
+	
 #A function to check if this diff has been found or not
 func _on_diff_1_a_visibility_changed():
 	e += 1
 	print ("Diffs found :",e)
+	$Label4.set_text(str(e,"/",total_diffs))
 	found = true
 	_warp_out()
 
@@ -19,6 +23,7 @@ func _on_diff_1_a_visibility_changed():
 func _on_diff_2_a_visibility_changed():
 	e += 1
 	print ("Diffs found :",e)
+	$Label4.set_text(str(e,"/",total_diffs))
 	found = true
 	_warp_out()
 
@@ -26,6 +31,7 @@ func _on_diff_2_a_visibility_changed():
 func _on_diff_3_a_visibility_changed():
 	e += 1
 	print ("Diffs found :",e)
+	$Label4.set_text(str(e,"/",total_diffs))
 	found = true
 	_warp_out()
 
@@ -33,6 +39,7 @@ func _on_diff_3_a_visibility_changed():
 func _on_diff_4_a_visibility_changed():
 	e += 1
 	print ("Diffs found :",e)
+	$Label4.set_text(str(e,"/",total_diffs))
 	found = true
 	_warp_out()
 
@@ -40,6 +47,7 @@ func _on_diff_4_a_visibility_changed():
 func _on_diff_5_a_visibility_changed():
 	e += 1
 	print ("Diffs found :",e)
+	$Label4.set_text(str(e,"/",total_diffs))
 	found = true
 	_warp_out()
 
@@ -47,6 +55,7 @@ func _on_diff_5_a_visibility_changed():
 func _on_diff_6_a_visibility_changed():
 	e += 1
 	print ("Diffs found :",e)
+	$Label4.set_text(str(e,"/",total_diffs))
 	found = true
 	_warp_out()
 

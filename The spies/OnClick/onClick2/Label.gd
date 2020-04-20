@@ -16,7 +16,7 @@ func _process(delta):
 
 func _time():
 	if s < 60:
-		set_text(str(s))
+		set_text(str("00:",s))
 	if s >= 60 && s < 120:
 		m = 1
 		set_text(str("0",m,":",s-60))

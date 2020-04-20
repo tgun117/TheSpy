@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/std_girl_a.png-d7318d26de20d87c8900fb2ff8ba44ab.stex"
+path="res://.import/PurpleBackground.png-1a2a74e1bbbc834a8bf13ec9b4146541.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://OnClick/images/std_girl_a.png"
-dest_files=[ "res://.import/std_girl_a.png-d7318d26de20d87c8900fb2ff8ba44ab.stex" ]
+source_file="res://OnClick/images/PurpleBackground.png"
+dest_files=[ "res://.import/PurpleBackground.png-1a2a74e1bbbc834a8bf13ec9b4146541.stex" ]
 
 [params]
 

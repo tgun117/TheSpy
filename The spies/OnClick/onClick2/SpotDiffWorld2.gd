@@ -4,7 +4,7 @@ extends Node2D
 # var a = 2
 # var b = "text"
 var e = 0
-const total_errors = 4
+const total_diffs = 4
 var time = 120
 var hp = PlayerNode.health*2
 var diff_found = false
@@ -12,12 +12,13 @@ var found = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	$Label2.set_text(str("0/",total_diffs))
 
 
 func _on_diff_1_a_visibility_changed():
 	e += 1
 	print (e)
+	$Label2.set_text(str(e,"/",total_diffs))
 	found = true
 	_warp_out()
 
@@ -25,6 +26,7 @@ func _on_diff_1_a_visibility_changed():
 func _on_diff_2_a_visibility_changed():
 	e += 1
 	print (e)
+	$Label2.set_text(str(e,"/",total_diffs))
 	found = true
 	_warp_out()
 
@@ -32,6 +34,7 @@ func _on_diff_2_a_visibility_changed():
 func _on_diff_3_a_visibility_changed():
 	e += 1
 	print (e)
+	$Label2.set_text(str(e,"/",total_diffs))
 	found = true
 	_warp_out()
 
@@ -39,12 +42,13 @@ func _on_diff_3_a_visibility_changed():
 func _on_diff_4_a_visibility_changed():
 	e += 1
 	print (e)
+	$Label2.set_text(str(e,"/",total_diffs))
 	found = true
 	_warp_out()
 
 
 func _warp_out():
-	if e == total_errors:
+	if e == total_diffs:
 		PlayerNode.health = hp/2
 		PlayerNode.recent_reward = time / 2
 		PlayerNode.coins += time / 2

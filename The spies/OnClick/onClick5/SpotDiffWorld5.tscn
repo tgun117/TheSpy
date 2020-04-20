@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://OnClick/onClick5/SpotDiffWorld5.gd" type="Script" id=1]
 [ext_resource path="res://OnClick/images/STDImg1.png" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://OnClick/onClick5/Area2D4.gd" type="Script" id=8]
 [ext_resource path="res://OnClick/onClick5/Area2D5.gd" type="Script" id=9]
 [ext_resource path="res://OnClick/onClick5/Label.gd" type="Script" id=10]
+[ext_resource path="res://OnClick/images/BeigeBackground.png" type="Texture" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 30, 30 )
@@ -174,29 +175,47 @@ position = Vector2( 638.453, 717.976 )
 shape = SubResource( 6 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 640, 720 )
+position = Vector2( 640.5, 800 )
+offset = Vector2( 0, -30 )
 current = true
-zoom = Vector2( 2, 4 )
+zoom = Vector2( 2.1, 4.5 )
 
 [node name="Label" type="Label" parent="."]
-margin_left = 70.0
-margin_top = 10.0
-margin_right = 224.0
-margin_bottom = 86.9998
-rect_scale = Vector2( 2, 3 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
+margin_left = 570.0
+margin_top = 1475.0
+margin_right = 735.0
+margin_bottom = 1557.0
+rect_scale = Vector2( 4, 4 )
+custom_colors/font_color = Color( 0.803922, 0.027451, 0.027451, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 script = ExtResource( 10 )
 
 [node name="Timer" type="Timer" parent="Label"]
 
+[node name="Label2" type="Label" parent="."]
+margin_left = 1080.0
+margin_top = 1475.0
+margin_right = 1245.0
+margin_bottom = 1557.0
+rect_scale = Vector2( 4, 4 )
+custom_colors/font_color = Color( 0.121569, 0.509804, 0.211765, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+
 [node name="Label3" type="Label" parent="."]
-margin_left = 70.0
-margin_top = 62.0
-margin_right = 235.0
-margin_bottom = 144.0
-rect_scale = Vector2( 2, 3 )
-custom_colors/font_color = Color( 0.196078, 0.776471, 0.329412, 1 )
+margin_left = 120.0
+margin_top = 1475.0
+margin_right = 285.0
+margin_bottom = 1557.0
+rect_scale = Vector2( 4, 4 )
+custom_colors/font_color = Color( 0.121569, 0.509804, 0.211765, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 uppercase = true
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 627.277, 753.454 )
+scale = Vector2( 2.84222, 4.20619 )
+z_index = -100
+texture = ExtResource( 11 )
 [connection signal="input_event" from="Area2D" to="." method="_on_Area2D_input_event"]
 [connection signal="input_event" from="Area2D" to="Area2D" method="_on_Area2D_input_event"]
 [connection signal="visibility_changed" from="Area2D/diff_1_a" to="." method="_on_diff_1_a_visibility_changed"]

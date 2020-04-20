@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://OnClick/onClick3/spotDiff3.gd" type="Script" id=1]
 [ext_resource path="res://OnClick/images/STDImg4.jpg" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://OnClick/onClick3/Diff4.gd" type="Script" id=8]
 [ext_resource path="res://OnClick/onClick3/Diff5.gd" type="Script" id=9]
 [ext_resource path="res://OnClick/onClick3/Label.gd" type="Script" id=10]
+[ext_resource path="res://OnClick/images/LBlueBackground.png" type="Texture" id=11]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 36.0555
@@ -166,28 +167,45 @@ position = Vector2( 317.123, 327.401 )
 shape = SubResource( 6 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 640, 0 )
+position = Vector2( 641, 20 )
 current = true
-zoom = Vector2( 2, 4.1 )
+zoom = Vector2( 2.1, 4.4 )
 
 [node name="Label" type="Label" parent="."]
-margin_left = 40.0
-margin_top = -710.0
-margin_right = 110.0
-margin_bottom = -670.0
-rect_scale = Vector2( 2, 2 )
+margin_left = 605.0
+margin_top = 758.0
+margin_right = 675.0
+margin_bottom = 798.0
+rect_scale = Vector2( 3, 3 )
 custom_colors/font_color = Color( 0.803922, 0.027451, 0.027451, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 script = ExtResource( 10 )
 
 [node name="Timer" type="Timer" parent="Label"]
 
+[node name="Label2" type="Label" parent="."]
+margin_left = 1080.0
+margin_top = 758.0
+margin_right = 1150.0
+margin_bottom = 798.0
+rect_scale = Vector2( 3, 3 )
+custom_colors/font_color = Color( 0.121569, 0.509804, 0.211765, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+
 [node name="Label3" type="Label" parent="."]
 margin_left = 130.0
-margin_top = -710.0
-margin_right = 296.0
-margin_bottom = -634.0
-rect_scale = Vector2( 1.75, 1.9 )
-custom_colors/font_color = Color( 0.196078, 0.776471, 0.329412, 1 )
+margin_top = 758.0
+margin_right = 200.0
+margin_bottom = 798.0
+rect_scale = Vector2( 3, 3 )
+custom_colors/font_color = Color( 0.121569, 0.509804, 0.211765, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( 631.31, 14.6817 )
+scale = Vector2( 2.85407, 3.82387 )
+z_index = -100
+texture = ExtResource( 11 )
 [connection signal="input_event" from="Area2D" to="Area2D" method="_on_Area2D_input_event"]
 [connection signal="visibility_changed" from="Area2D/diff_1_a" to="." method="_on_diff_1_a_visibility_changed"]
 [connection signal="visibility_changed" from="Area2D/diff_1_a" to="Area2D" method="_on_diff_1_a_visibility_changed"]
