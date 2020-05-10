@@ -1,12 +1,16 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Fonts/OpenSans-Bold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Fonts/Font_.tres" type="DynamicFont" id=1]
 [ext_resource path="res://toTheShop.gd" type="Script" id=2]
 [ext_resource path="res://playTheGame.gd" type="Script" id=3]
+[ext_resource path="res://OnClick/images/BackGround.png" type="Texture" id=4]
 
-[sub_resource type="DynamicFont" id=1]
-size = 25
-font_data = ExtResource( 1 )
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://Fonts/OpenSans-Italic.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 55
+font_data = SubResource( 1 )
 
 [node name="Start Screen" type="Node2D"]
 
@@ -15,19 +19,12 @@ position = Vector2( 320.679, 177.548 )
 current = true
 zoom = Vector2( 1.5, 1.5 )
 
-[node name="Label" type="Label" parent="."]
-margin_left = 260.0
-margin_top = 32.0
-margin_right = 383.0
-margin_bottom = 67.0
-custom_fonts/font = SubResource( 1 )
-text = "The Spies"
-
 [node name="toTheShop" type="Button" parent="."]
 margin_left = 64.0
 margin_top = 128.0
 margin_right = 192.0
 margin_bottom = 224.0
+custom_fonts/font = ExtResource( 1 )
 text = "Shop"
 script = ExtResource( 2 )
 
@@ -36,5 +33,22 @@ margin_left = 448.0
 margin_top = 128.0
 margin_right = 576.0
 margin_bottom = 224.0
+custom_fonts/font = ExtResource( 1 )
 text = "Play"
 script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 319.5, 177.5 )
+scale = Vector2( 1.41027, 1.60898 )
+z_index = -1
+texture = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 212.0
+margin_top = 66.0
+margin_right = 437.0
+margin_bottom = 142.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.0941176, 0.180392, 0.647059, 1 )
+custom_colors/font_color_shadow = Color( 0.0431373, 0, 0.407843, 1 )
+text = "The Spies"

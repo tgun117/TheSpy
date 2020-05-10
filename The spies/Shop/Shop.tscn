@@ -16,6 +16,7 @@
 [ext_resource path="res://shop-2607121_1920.jpg" type="Texture" id=14]
 
 [sub_resource type="DynamicFont" id=1]
+size = 18
 font_data = ExtResource( 13 )
 
 [node name="Shop" type="Node2D"]
@@ -89,6 +90,8 @@ margin_top = 2.85001
 margin_right = 416.8
 margin_bottom = 77.85
 custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 1, 1, 1, 1 )
 text = "Prices
 New character: 50 coins
 Add more health: 25 coins"

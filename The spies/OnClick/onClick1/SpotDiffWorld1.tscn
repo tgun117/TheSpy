@@ -91,14 +91,14 @@ shape = SubResource( 2 )
 
 [node name="diff_2_a" type="Sprite" parent="Area2D2"]
 visible = false
-position = Vector2( 330.438, 288.313 )
-scale = Vector2( 0.0820816, 0.0713519 )
+position = Vector2( 330.867, 290.294 )
+scale = Vector2( 0.181022, 0.163733 )
 texture = ExtResource( 5 )
 
 [node name="diff_2_b" type="Sprite" parent="Area2D2"]
 visible = false
 position = Vector2( 950, 290 )
-scale = Vector2( 0.0820816, 0.0713519 )
+scale = Vector2( 0.181, 0.164 )
 texture = ExtResource( 5 )
 
 [node name="Area2D3" type="Area2D" parent="."]
@@ -295,5 +295,5 @@ texture = ExtResource( 13 )
 [connection signal="visibility_changed" from="Area2D6/diff_6_a" to="." method="_on_diff_6_a_visibility_changed"]
 [connection signal="input_event" from="Area2D7" to="." method="_on_Area2D7_input_event"]
 [connection signal="pressed" from="Label/Button" to="Label" method="_on_Button_pressed"]
-[connection signal="timeout" from="Label2/Timer" to="Label2" method="_on_Timer_timeout"]
 [connection signal="timeout" from="Label2/Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Label2/Timer" to="Label2" method="_on_Timer_timeout"]

@@ -1,6 +1,16 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Start_screen.gd" type="Script" id=1]
+[ext_resource path="res://Fonts/OpenSans-BoldItalic.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Start_screen.gd" type="Script" id=2]
+[ext_resource path="res://OnClick/images/a1a8a_tree.jpg" type="Texture" id=3]
+[ext_resource path="res://Fonts/OpenSans-Semibold.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+font_data = ExtResource( 4 )
 
 [node name="Game Over" type="Node2D"]
 
@@ -8,17 +18,27 @@
 position = Vector2( 317.292, 178.953 )
 current = true
 
-[node name="Game Over text" type="Label" parent="."]
-margin_left = 288.0
-margin_top = 160.0
-margin_right = 361.0
-margin_bottom = 174.0
-text = "Game Over"
-
 [node name="Start_screen" type="Button" parent="."]
 margin_left = 256.0
 margin_top = 192.0
 margin_right = 384.0
 margin_bottom = 256.0
+custom_fonts/font = SubResource( 1 )
 text = "Main Menu"
-script = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 359.101, 195.701 )
+scale = Vector2( 0.546813, 0.541887 )
+z_index = -1
+texture = ExtResource( 3 )
+
+[node name="Game Over text" type="Label" parent="."]
+margin_left = 209.9
+margin_top = 61.3998
+margin_right = 424.9
+margin_bottom = 141.4
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.247059, 0.243137, 0.243137, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "Game Over"

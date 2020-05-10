@@ -1,46 +1,73 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://OnClick/VictoryScreen.gd" type="Script" id=1]
-[ext_resource path="res://OnClick/Button.gd" type="Script" id=2]
+[ext_resource path="res://Fonts/Font_.tres" type="DynamicFont" id=2]
 [ext_resource path="res://OnClick/Button2.gd" type="Script" id=3]
-[ext_resource path="res://OnClick/Label.gd" type="Script" id=4]
+[ext_resource path="res://OnClick/Button.gd" type="Script" id=4]
+[ext_resource path="res://Fonts/OpenSans-Italic.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://OnClick/images/3QPF_tree.jpg" type="Texture" id=6]
+[ext_resource path="res://OnClick/Label.gd" type="Script" id=7]
+
+[sub_resource type="DynamicFont" id=3]
+size = 12
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFontData" id=2]
+font_path = "res://Fonts/OpenSans-BoldItalic.ttf"
+
+[sub_resource type="DynamicFont" id=1]
+size = 25
+outline_color = Color( 0, 0, 0, 1 )
+font_data = SubResource( 2 )
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
 
-[node name="Button" type="Button" parent="."]
-margin_left = -210.0
-margin_top = 30.0
-margin_right = -68.0
-margin_bottom = 110.0
-text = "Main Menu"
-script = ExtResource( 2 )
-
 [node name="Button2" type="Button" parent="."]
 margin_left = 60.0
 margin_top = 30.0
-margin_right = 202.0
+margin_right = 210.0
 margin_bottom = 110.0
+custom_fonts/font = ExtResource( 2 )
 text = "Level selector"
 script = ExtResource( 3 )
 
-[node name="Label" type="Label" parent="."]
-margin_left = -140.0
-margin_top = -130.0
-margin_right = 10.0
-margin_bottom = -60.0
-rect_scale = Vector2( 3, 3 )
-text = "Victory Screen"
+[node name="Button" type="Button" parent="."]
+margin_left = -210.0
+margin_top = 30.0
+margin_right = -60.0
+margin_bottom = 110.0
+custom_fonts/font = ExtResource( 2 )
+text = "Main Menu"
 script = ExtResource( 4 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
 
 [node name="VictoryReward" type="Label" parent="."]
-margin_left = -55.0
+margin_left = -43.0
 margin_top = 31.0
-margin_right = 45.0
+margin_right = 57.0
 margin_bottom = 103.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "test 123"
-[connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 3.40811, 2.27204 )
+scale = Vector2( 0.345687, 0.291181 )
+z_index = -1
+texture = ExtResource( 6 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = -115.558
+margin_top = -116.184
+margin_right = 184.442
+margin_bottom = -16.1838
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.745098, 0.733333, 0.733333, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "LEVEL COMPLETE"
+script = ExtResource( 7 )
 [connection signal="pressed" from="Button2" to="Button2" method="_on_Button2_pressed"]
+[connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
