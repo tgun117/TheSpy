@@ -7,7 +7,7 @@ const JUMP_HEIGHT = -670
 
 var motion = Vector2()
 var health
-var coins = 500
+var coins = 0
 var recent_reward = 0
 
 func _ready():
