@@ -237,5 +237,5 @@ texture = ExtResource( 11 )
 [connection signal="visibility_changed" from="Area2D5/diff_5_a" to="." method="_on_diff_5_a_visibility_changed"]
 [connection signal="visibility_changed" from="Area2D5/diff_5_a" to="Area2D5" method="_on_diff_5_a_visibility_changed"]
 [connection signal="input_event" from="Area2D6" to="." method="_on_Area2D6_input_event"]
-[connection signal="timeout" from="Label/Timer" to="Label" method="_on_Timer_timeout"]
 [connection signal="timeout" from="Label/Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Label/Timer" to="Label" method="_on_Timer_timeout"]

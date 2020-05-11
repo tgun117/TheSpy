@@ -22,7 +22,7 @@ radius = 30.0
 radius = 31.6228
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 40, 50 )
+extents = Vector2( 33.0904, 80.9988 )
 
 [sub_resource type="CircleShape2D" id=5]
 radius = 40.0
@@ -116,22 +116,22 @@ texture = ExtResource( 5 )
 script = ExtResource( 8 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D4"]
-position = Vector2( 500, -440 )
+position = Vector2( 546.557, -469.442 )
 shape = SubResource( 4 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D4"]
-position = Vector2( 480, 290 )
+position = Vector2( 532.3, 265.993 )
 shape = SubResource( 4 )
 
 [node name="diff_4_a" type="Sprite" parent="Area2D4"]
 visible = false
-position = Vector2( 500, -440 )
+position = Vector2( 532, -450 )
 scale = Vector2( 0.371245, 0.5 )
 texture = ExtResource( 5 )
 
 [node name="diff_4_b" type="Sprite" parent="Area2D4"]
 visible = false
-position = Vector2( 480, 290 )
+position = Vector2( 532, 265.445 )
 scale = Vector2( 0.371245, 0.5 )
 texture = ExtResource( 5 )
 
@@ -202,7 +202,7 @@ custom_colors/font_color = Color( 0.121569, 0.509804, 0.211765, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 
 [node name="Sprite3" type="Sprite" parent="."]
-position = Vector2( 631.31, 14.6817 )
+position = Vector2( 676.281, -32.8778 )
 scale = Vector2( 2.85407, 3.82387 )
 z_index = -100
 texture = ExtResource( 11 )
@@ -222,5 +222,5 @@ texture = ExtResource( 11 )
 [connection signal="visibility_changed" from="Area2D5/diff_5_a" to="." method="_on_diff_5_a_visibility_changed"]
 [connection signal="visibility_changed" from="Area2D5/diff_5_a" to="Area2D5" method="_on_diff_5_a_visibility_changed"]
 [connection signal="input_event" from="Area2D6" to="." method="_on_Area2D6_input_event"]
-[connection signal="timeout" from="Label/Timer" to="Label" method="_on_Timer_timeout"]
 [connection signal="timeout" from="Label/Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Label/Timer" to="Label" method="_on_Timer_timeout"]
