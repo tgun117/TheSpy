@@ -1,7 +1,7 @@
 extends Label
 
-var m
-var s = 120
+var m #Minutes
+var s = 120 #Seconds
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -12,7 +12,7 @@ func _ready():
 func _process(delta):
 	_time()
 
-
+#A function to format the time into minutes and seconds
 func _time():
 	if s < 60:
 		set_text(str("00:",s))

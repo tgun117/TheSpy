@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://OnClick/SpotDiffWorld1.gd" type="Script" id=1]
 [ext_resource path="res://OnClick/images/STDImg3.1.png" type="Texture" id=2]
@@ -10,9 +10,10 @@
 [ext_resource path="res://OnClick/Diff4.gd" type="Script" id=8]
 [ext_resource path="res://OnClick/Diff5.gd" type="Script" id=9]
 [ext_resource path="res://OnClick/Diff6.gd" type="Script" id=10]
-[ext_resource path="res://OnClick/onClick1/Label.gd" type="Script" id=11]
-[ext_resource path="res://OnClick/onClick1/Label2.gd" type="Script" id=12]
-[ext_resource path="res://OnClick/images/OrangeBackground.png" type="Texture" id=13]
+[ext_resource path="res://Fonts/OpenSans-Regular.ttf" type="DynamicFontData" id=11]
+[ext_resource path="res://OnClick/onClick1/Label.gd" type="Script" id=12]
+[ext_resource path="res://OnClick/onClick1/Label2.gd" type="Script" id=13]
+[ext_resource path="res://OnClick/images/OrangeBackground.png" type="Texture" id=14]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 14.1421
@@ -34,6 +35,11 @@ height = 0.0
 
 [sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 611.625, 350 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 20
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 11 )
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
@@ -210,9 +216,10 @@ margin_left = 450.0
 margin_top = 210.0
 margin_right = 635.0
 margin_bottom = 350.0
-rect_scale = Vector2( 2, 2 )
 size_flags_stretch_ratio = 0.0
+custom_fonts/font = SubResource( 8 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.572549, 0.572549, 0.572549, 1 )
 text = "Welcome to level 1:
 
 To complete the level you
@@ -221,21 +228,21 @@ To complete the level you
  and click on them.
 
 	Good luck"
-script = ExtResource( 11 )
+script = ExtResource( 12 )
 
 [node name="ColorRect" type="ColorRect" parent="Label"]
 show_behind_parent = true
 margin_left = -5.0
 margin_top = -10.0
-margin_right = 190.0
-margin_bottom = 150.0
+margin_right = 301.0
+margin_bottom = 262.0
 color = Color( 0.145098, 0.145098, 0.145098, 1 )
 
 [node name="Button" type="Button" parent="Label"]
-margin_left = 95.0
-margin_top = 110.0
-margin_right = 140.0
-margin_bottom = 135.0
+margin_left = 180.0
+margin_top = 214.0
+margin_right = 266.0
+margin_bottom = 251.0
 text = "OK"
 
 [node name="Label2" type="Label" parent="."]
@@ -247,7 +254,7 @@ rect_scale = Vector2( 2, 2 )
 custom_colors/font_color = Color( 0.803922, 0.027451, 0.027451, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 uppercase = true
-script = ExtResource( 12 )
+script = ExtResource( 13 )
 
 [node name="Timer" type="Timer" parent="Label2"]
 
@@ -270,11 +277,11 @@ custom_colors/font_color = Color( 0.121569, 0.509804, 0.211765, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 clip_text = true
 
-[node name="Sprite3" type="Sprite" parent="."]
+[node name="Background_color" type="Sprite" parent="."]
 position = Vector2( 504.616, 246.192 )
 scale = Vector2( 2.59109, 2.15614 )
 z_index = -100
-texture = ExtResource( 13 )
+texture = ExtResource( 14 )
 [connection signal="input_event" from="Area2D" to="Area2D" method="_on_Area2D_input_event"]
 [connection signal="visibility_changed" from="Area2D/diff_1_a" to="Area2D" method="_on_diff_1_a_visibility_changed"]
 [connection signal="visibility_changed" from="Area2D/diff_1_a" to="." method="_on_diff_1_a_visibility_changed"]

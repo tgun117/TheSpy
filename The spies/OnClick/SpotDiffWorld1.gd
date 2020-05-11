@@ -63,7 +63,7 @@ func _on_diff_6_a_visibility_changed():
 #A function to warp the player back to the level selector if all diffs are found
 func _warp_out():
 	if e == total_diffs:
-		PlayerNode.health = hp/2 #Reduces the HP back to the player health when exiting the level
+		PlayerNode.health = (hp+1)/2 #Reduces the HP back to the player health when exiting the level
 		PlayerNode.recent_reward = time / 2
 		PlayerNode.coins += time / 2
 		get_tree().change_scene("res://OnClick/VictoryScreen.tscn")
