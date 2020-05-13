@@ -50,7 +50,7 @@ next_onclick = "res://OnClick/onClick2/SpotDiffWorld2.tscn"
 
 [node name="Onclick_transport3" parent="." instance=ExtResource( 3 )]
 position = Vector2( 0, 32 )
-next_onclick = "res://OnClick/onClick3/spotDiff3.tscn"
+next_onclick = "res://OnClick/onClick3/SpotDiffWorld3.tscn"
 
 [node name="Onclick_transport4" parent="." instance=ExtResource( 3 )]
 position = Vector2( 288, -64 )

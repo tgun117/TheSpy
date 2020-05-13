@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://OnClick/onClick4/SpotDiffWorld4.gd" type="Script" id=1]
 [ext_resource path="res://OnClick/images/STDImg2.1.png" type="Texture" id=2]
@@ -9,8 +9,9 @@
 [ext_resource path="res://OnClick/onClick4/Area2D3.gd" type="Script" id=7]
 [ext_resource path="res://OnClick/onClick4/Area2D4.gd" type="Script" id=8]
 [ext_resource path="res://OnClick/onClick4/Area2D5.gd" type="Script" id=9]
-[ext_resource path="res://OnClick/onClick4/Label.gd" type="Script" id=10]
-[ext_resource path="res://OnClick/images/PurpleBackground.png" type="Texture" id=11]
+[ext_resource path="res://Fonts/Lvl4Disp.tres" type="DynamicFont" id=10]
+[ext_resource path="res://OnClick/onClick4/Label.gd" type="Script" id=11]
+[ext_resource path="res://OnClick/images/PurpleBackground.png" type="Texture" id=12]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 10.7936
@@ -33,12 +34,12 @@ extents = Vector2( 330.205, 246.92 )
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
 
-[node name="SpriteA" type="Sprite" parent="."]
+[node name="Img_a" type="Sprite" parent="."]
 position = Vector2( 160, 240 )
 z_index = -10
 texture = ExtResource( 2 )
 
-[node name="SpriteB" type="Sprite" parent="."]
+[node name="Img_b" type="Sprite" parent="."]
 position = Vector2( 490, 240 )
 z_index = -10
 texture = ExtResource( 3 )
@@ -169,56 +170,56 @@ position = Vector2( 324.243, 253 )
 current = true
 zoom = Vector2( 1.1, 1.55 )
 
-[node name="Label" type="Label" parent="."]
+[node name="Timer_display" type="Label" parent="."]
 margin_left = 293.0
 margin_top = 490.0
 margin_right = 333.0
 margin_bottom = 504.0
-rect_scale = Vector2( 1.75, 1.75 )
+custom_fonts/font = ExtResource( 10 )
 custom_colors/font_color = Color( 0.803922, 0.027451, 0.027451, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
-script = ExtResource( 10 )
+script = ExtResource( 11 )
 
-[node name="Timer" type="Timer" parent="Label"]
+[node name="Timer" type="Timer" parent="Timer_display"]
 
-[node name="Label2" type="Label" parent="."]
+[node name="Diffs_found_display" type="Label" parent="."]
 margin_left = 590.0
 margin_top = 490.0
 margin_right = 630.0
 margin_bottom = 504.0
-rect_scale = Vector2( 2, 2 )
+custom_fonts/font = ExtResource( 10 )
 custom_colors/font_color = Color( 0.121569, 0.509804, 0.211765, 1 )
 custom_colors/font_outline_modulate = Color( 0.156863, 0.156863, 0.156863, 1 )
 
-[node name="Label3" type="Label" parent="."]
+[node name="HP_display" type="Label" parent="."]
 margin_left = 20.0
 margin_top = 490.0
 margin_right = 60.0
 margin_bottom = 504.0
-rect_scale = Vector2( 2, 2 )
+custom_fonts/font = ExtResource( 10 )
 custom_colors/font_color = Color( 0.121569, 0.509804, 0.211765, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Background_color" type="Sprite" parent="."]
 position = Vector2( 280.841, 214.994 )
 scale = Vector2( 1.82479, 1.91487 )
 z_index = -100
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 [connection signal="input_event" from="Area2D" to="Area2D" method="_on_Area2D_input_event"]
-[connection signal="visibility_changed" from="Area2D/diff_1_a" to="Area2D" method="_on_diff_1_a_visibility_changed"]
 [connection signal="visibility_changed" from="Area2D/diff_1_a" to="." method="_on_diff_1_a_visibility_changed"]
+[connection signal="visibility_changed" from="Area2D/diff_1_a" to="Area2D" method="_on_diff_1_a_visibility_changed"]
 [connection signal="input_event" from="Area2D2" to="Area2D2" method="_on_Area2D2_input_event"]
-[connection signal="visibility_changed" from="Area2D2/diff_2_a" to="Area2D2" method="_on_diff_2_a_visibility_changed"]
 [connection signal="visibility_changed" from="Area2D2/diff_2_a" to="." method="_on_diff_2_a_visibility_changed"]
+[connection signal="visibility_changed" from="Area2D2/diff_2_a" to="Area2D2" method="_on_diff_2_a_visibility_changed"]
 [connection signal="input_event" from="Area2D3" to="Area2D3" method="_on_Area2D3_input_event"]
-[connection signal="visibility_changed" from="Area2D3/diff_3_a" to="Area2D3" method="_on_diff_3_a_visibility_changed"]
 [connection signal="visibility_changed" from="Area2D3/diff_3_a" to="." method="_on_diff_3_a_visibility_changed"]
+[connection signal="visibility_changed" from="Area2D3/diff_3_a" to="Area2D3" method="_on_diff_3_a_visibility_changed"]
 [connection signal="input_event" from="Area2D4" to="Area2D4" method="_on_Area2D4_input_event"]
-[connection signal="visibility_changed" from="Area2D4/diff_4_a" to="Area2D4" method="_on_diff_4_a_visibility_changed"]
 [connection signal="visibility_changed" from="Area2D4/diff_4_a" to="." method="_on_diff_4_a_visibility_changed"]
+[connection signal="visibility_changed" from="Area2D4/diff_4_a" to="Area2D4" method="_on_diff_4_a_visibility_changed"]
 [connection signal="input_event" from="Area2D5" to="Area2D5" method="_on_Area2D5_input_event"]
 [connection signal="visibility_changed" from="Area2D5/diff_5_a" to="." method="_on_diff_5_a_visibility_changed"]
 [connection signal="visibility_changed" from="Area2D5/diff_5_a" to="Area2D5" method="_on_diff_5_a_visibility_changed"]
 [connection signal="input_event" from="Area2D6" to="." method="_on_Area2D6_input_event"]
-[connection signal="timeout" from="Label/Timer" to="." method="_on_Timer_timeout"]
-[connection signal="timeout" from="Label/Timer" to="Label" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer_display/Timer" to="Timer_display" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer_display/Timer" to="." method="_on_Timer_timeout"]

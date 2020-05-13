@@ -9,13 +9,13 @@ var diff_found = false #A boolean to be set true when found is true
 
 #Sets the text to 0/total number of difference when the level is first loaded.
 func _ready():
-	$Label2.set_text(str("0/",total_diffs))
+	$Diffs_found_display.set_text(str("0/",total_diffs))
 
 #A function to check if this difference has been found or not, and update the differences found display
 func _on_diff_1_a_visibility_changed():
 	e += 1
 	print (e)
-	$Label2.set_text(str(e,"/",total_diffs))
+	$Diffs_found_display.set_text(str(e,"/",total_diffs))
 	found =true
 	_warp_out()
 
@@ -23,7 +23,7 @@ func _on_diff_1_a_visibility_changed():
 func _on_diff_2_a_visibility_changed():
 	e += 1
 	print (e)
-	$Label2.set_text(str(e,"/",total_diffs))
+	$Diffs_found_display.set_text(str(e,"/",total_diffs))
 	found =true
 	_warp_out()
 
@@ -31,7 +31,7 @@ func _on_diff_2_a_visibility_changed():
 func _on_diff_3_a_visibility_changed():
 	e += 1
 	print (e)
-	$Label2.set_text(str(e,"/",total_diffs))
+	$Diffs_found_display.set_text(str(e,"/",total_diffs))
 	found =true
 	_warp_out()
 
@@ -39,7 +39,7 @@ func _on_diff_3_a_visibility_changed():
 func _on_diff_4_a_visibility_changed():
 	e += 1
 	print (e)
-	$Label2.set_text(str(e,"/",total_diffs))
+	$Diffs_found_display.set_text(str(e,"/",total_diffs))
 	found =true
 	_warp_out()
 
@@ -47,7 +47,7 @@ func _on_diff_4_a_visibility_changed():
 func _on_diff_5_a_visibility_changed():
 	e += 1
 	print (e)
-	$Label2.set_text(str(e,"/",total_diffs))
+	$Diffs_found_display.set_text(str(e,"/",total_diffs))
 	found =true
 	_warp_out()
 
@@ -74,7 +74,8 @@ func _lost_all_hp():
 #A function to decrease the timer after 1 second, and updates the current HP display(Label3)
 func _on_Timer_timeout():
 	time = time-1
-	$Label3.set_text(str("HP:",hp/2))
+	$HP_display.set_text(str("HP:",hp/2))
+	_time_ran_out()
 
 #A function to register when the player clicks the screen, and checks if a difference was clicked or not. If a difference was not clicked it lowers the HP by 1. This runs twice during 1 click in gameplay, and will decrease 1 HP for a click on a difference.
 func _on_Area2D6_input_event(viewport, event, shape_idx):
